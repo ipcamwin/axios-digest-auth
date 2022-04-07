@@ -8,8 +8,7 @@
   "scripts": {
     "build": "./node_modules/.bin/tsc",
     "test": "tsc && mocha",
-    "docs:serve": "cd docs && mkdocs serve",
-    "postinstall": "tsc --outDir ./dist"
+    "docs:serve": "cd docs && mkdocs serve"
   },
   "dependencies": {
     "axios": "0.22.0"
