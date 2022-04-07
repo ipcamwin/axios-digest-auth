@@ -51,9 +51,9 @@ export default class AxiosDigestAuth {
       const path = url.parse(opts.url!).pathname;
       const ha2 = crypto.createHash('md5').update(`${opts.method ?? "GET"}:${path}`).digest('hex');
       const response = crypto.createHash('md5').update(`${ha1}:${nonce}:${nonceCount}:${cnonce}:auth:${ha2}`).digest('hex');
-      const authorization = `Digest username="${this.username}",realm="${realm}",` +
-        `nonce="${nonce}",uri="${path}",qop="auth",algorithm="MD5",` +
-        `response="${response}",nc="${nonceCount}",cnonce="${cnonce}"`;
+      const authorization = `Digest username="${this.username}", realm="${realm}", ` +
+        `nonce="${nonce}", uri="${path}", qop="auth", algorithm="MD5", ` +
+        `response="${response}", nc="${nonceCount}", cnonce="${cnonce}"`;
       if (opts.headers) {
         opts.headers["authorization"] = authorization;
       } else {
