@@ -1,14 +1,15 @@
 {
-  "name": "@mhoc/axios-digest-auth",
+  "name": "@ipcamwin/axios-digest-auth",
   "description": "axios-like http digest auth",
   "version": "0.8.0",
-  "homepage": "https://github.com/mhoc/axios-digest-auth",
+  "homepage": "https://github.com/dwin-scott-kao/axios-digest-auth",
   "license": "MIT",
   "main": "./dist",
   "scripts": {
     "build": "./node_modules/.bin/tsc",
     "test": "tsc && mocha",
-    "docs:serve": "cd docs && mkdocs serve"
+    "docs:serve": "cd docs && mkdocs serve",
+    "postinstall": "tsc --outDir ./dist"
   },
   "dependencies": {
     "axios": "0.22.0"
