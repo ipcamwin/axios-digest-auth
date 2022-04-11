@@ -1,13 +1,18 @@
-# axios-digest-auth
+# IPCAMWIN axios-digest-auth
 
-[![npm](https://img.shields.io/badge/npm-0.8.0-yellow)](https://www.npmjs.com/package/@mhoc/axios-digest-auth)
-[![docs](https://img.shields.io/badge/documentation-0.8.0-blue)](https://axios-digest-auth.mhoc.co)
+clone from https://github.com/mhoc/axios-digest-auth
 
 A library which implements HTTP digest authentication in a manner which should be familiar to any 
 project which also uses Axios.
 
+## Diff from origin
+1. nginx need space after comma
+2. using status code 418 instad of 401(for web not prompt for password)
+
+## Development
 ```
-$ npm i @mhoc/axios-digest-auth
+npm install
+npm build
 ```
 
 Check out [the documentation site](https://axios-digest-auth.mhoc.co) for more information 

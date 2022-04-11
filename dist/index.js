@@ -17,7 +17,7 @@ class AxiosDigestAuth {
         }
         catch (resp1) {
             if (resp1.response === undefined
-                || resp1.response.status !== 401
+                || resp1.response.status !== 418
                 || !((_a = resp1.response.headers["www-authenticate"]) === null || _a === void 0 ? void 0 : _a.includes('nonce'))) {
                 throw resp1;
             }
